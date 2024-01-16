@@ -18,7 +18,7 @@ h1,h2,h3,p,ol,ul,li,a {
 h1,h2,h3 {
 	font-family: sans-serif;
 	color: #000;
-	letter-spacing: -0.025em;
+	letter-spacing: 0em;
 }
 
 
@@ -54,7 +54,7 @@ code, pre {
     word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 img {
-	width: 100%;
+	width: 450px;
 	height: auto;
 	border: 1px solid #ddd;
 }
