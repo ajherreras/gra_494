@@ -1,6 +1,5 @@
 /* Default */
 
-@font-face { font-family: 'Universal Sans'; src: url('/font/Universal-Sans-Display-450-Trial.ttf'); } 
 
 body {
 	width: 100%;
@@ -8,11 +7,10 @@ body {
 	padding: 0;
 	height: auto;
 	line-height: 1.5;
-	letter-spacing: 0.05em;
 	font-size: 16px;
 	background-color: #ffffff;
 	color: #000;
-	font-family: 'Universal Sans';
+	font-family: "Poppins", sans-serif;
 }
 
 a {
@@ -23,6 +21,7 @@ a {
 a:hover {
 	color: #000;
 }
+
 
 li {
 	list-style-type: none;
@@ -43,27 +42,128 @@ code, pre {
     white-space: -o-pre-wrap;    /* Opera 7 */
     word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
+
+.grid {
+	gap: 1em;
+}
+
+
+.grid--two-col {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.grid--three-col {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-card {
+	border: 1px solid #dedede;
+	border-radius: 5px;
+	padding: 1em;
+}
+
+.grid--one-col .grid-card {
+	margin-bottom: 2em;
+}
+
+.grid-item-space-right {
+	padding-right: 3em;
+}
+
+.align-center {
+	align-items:center;
+}
+
+.container {
+	padding: 3em;
+}
+
+.card-header::after {
+	content: "";
+    width: 32px;
+    height: 2px;
+    display: block;
+    background-color: #b5c0cd;
+    margin-top: 10px;
+}
+
 .img-single {
-	max-width:25%;
+	width: 50%;
 	height: auto;
 	border: 1px solid #ddd;
+}
+
+.img-project {
+	width: 100%;
 }
 
 .heading--page-title {
 	padding-bottom: 1rem;
 }
 
+h1,h2,h3 {
+	font-weight:500;
+}
+
 h1 {
-	font-size: 64px;
+	font-size: 54px;
+	margin:0;
+	letter-spacing:-0.04em;
 }
 
 h2 {
 	font-size: 32px;
+
 }
 
 p {
-	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 300;
 }
+
+.text--lead-paragraph {
+	font-size: 1.25em;
+}
+
+.link-title {
+	font-weight:300;
+	color:#55616a;
+}
+
+.link {
+	font-weight:300;
+}
+
+.link-large {
+	color: #000;
+	font-size: 1.5em;
+	border-bottom: 2px solid #bbc4d2;
+}
+
+h4 {
+	margin: 0em;
+}
+
+.link p {
+	margin: 0;
+}
+
+.link-small {
+	color: #000;
+	border-bottom: 2px solid #bbc4d2;
+}
+
+.list-dashed-item {
+	font-weight: 500;
+}
+
+.list-dashed-item::before {
+	content:"—";
+	color: #bbc4d2;
+	margin-right: 7px;
+}
+
 
 section.main {
     max-width: 1000px;

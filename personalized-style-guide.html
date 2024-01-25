@@ -8,6 +8,10 @@
   <title>Midterm Project - Atoms</title>
   <link rel="stylesheet" href="css/personalized.css?v=1.0">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
 </head>
 <!-- Body -->
 <body>
@@ -16,102 +20,159 @@
     <a href="/">Home</a>
   </div>
 
-
   <div class="container">
     <h1 class="heading heading--page-title">Personalized Style Guide</h1>
     <h2 class="heading heading-category">Atoms</h2>
       
-      <h3>Image</h3>
+    <div class="grid grid--three-col">
+
+      <div class="grid-card">
+      <h3 class="card-header">Image</h3>
       <p><img class="img img-single" src="img/contact.jpg"></img></p>
+      </div>
 
-      <h3>H1</h3>
+      <div class="grid-card">
+      <h3 class="card-header">H1</h3>
       <h1 class="heading">Let’s Talk</h1>
+      </div>
 
-      <h3>Text</h3>
-      <p class="text">We'd love to learn more about you and what we can design and build together.</p>
+      <div class="grid-card">
+      <h3 class="card-header">Text</h3>
+      <p class="text text--lead-paragraph">We'd love to learn more about you and what we can design and build together.</p>
+      </div>
 
-      <h3>H4</h3>
+      <div class="grid-card">
+      <h3 class="card-header">Link title</h3>
       <h4 class="heading link-title">Become a Client</h4>
+      </div>
       
-      <h3>Large link</h3>
-      <p><a class="link link-large" href="#">hey@clay.global</a></p>
+      <div class="grid-card">
+      <h3 class="card-header">Large link</h3>
+      <span><a class="link link-large" href="#">hey@clay.global</a></span>
+      </div>
 
-      <h3>Small link</h3>
-      <p><a class="link link-small" href="#">300 Broadway, San Francisco, CA 94133</a></p>
+      <div class="grid-card">
+      <h3 class="card-header">Small link</h3>
+      <span><a class="link link-small" href="#">300 Broadway, San Francisco, CA 94133</a></span>
+      </div>
 
-      <h3>List item</h3>
-      <li>Brand Strategy</li>
-
+      <div class="grid-card">
+      <h3 class="card-header">List item</h3>
+      <li class="list list-dashed-item">Brand Strategy</li>
+      </div>
+    </div>
   </div>
 
     <div class="container">
       <h2 class="heading heading-category">Molecules</h2>
 
-      <h3>H1 and text</h3>
+      <div class="grid grid--three-col">
+
+      <div class="grid-card">
+      <h3 class="card-header">H1 and text</h3>
       <h1 class="heading">Let’s Talk</h1>
       <p class="text">We'd love to learn more about you and what we can design and build together.</p>
-      <br>
+      </div>
 
-      <h3>Link and title</h3>
+      <div class="grid-card">
+      <h3 class="card-header">Link and title</h3>
       <h4 class="heading link-title">Become a Client</h4>
       <p><a class="link link-large" href="#">hey@clay.global</a></p>
-      <br>
+      </div>
 
-      <h3>Small links</h3>
+      <div class="grid-card">
+      <h3 class="card-header">Small links</h3>
       <p>
         <a class="link link-small" href="#">300 Broadway, San Francisco, CA 94133</a> 
         <a class="link link-small" href="#">Privacy</a>
         <a class="link link-small" href="#">Terms</a>
       </p>
-      <br>
+      </div>
 
-      <h3>H2 and text</h3>
+      <div class="grid-card">
+      <h3 class="card-header">H2 and text</h3>
       <h2 class="heading">Branding</h2>
       <p class="text">At the core of our approach, we maintain that brand and UX are closely connected and work together. Our team specializes in creating and representing digital brand identities across channels, providing strategy assistance and guidelines to ensure consistency.</p>
-      <br>
+      </div>
 
-      <h3>List</h3>
+      <div class="grid-card">
+      <h3 class="card-header">List</h3>
       <ul>
-        <li>Brand Strategy</li>
-        <li>Brand Architecture</li>
-        <li>Verbal Identity</li>
-        <li>Visual Identity</li>
-        <li>Brand Guidelines</li>
-        <li>Brand Experiences</li>
+        <li class="list list-dashed-item">Brand Strategy</li>
+        <li class="list list-dashed-item">Brand Architecture</li>
+        <li class="list list-dashed-item">Verbal Identity</li>
+        <li class="list list-dashed-item">Visual Identity</li>
+        <li class="list list-dashed-item">Brand Guidelines</li>
+        <li class="list list-dashed-item">Brand Experiences</li>
       </ul>
+    </div>
+    </div>
     </div>
 
     <div class="container">
     <h2>Organisms</h2>
 
-    <h3>Contact info</h3>
-      <h1 class="heading">Let’s Talk</h1>
-      <p class="text">We'd love to learn more about you and what we can design and build together.</p>
-      <h4 class="heading link-title">Become a Client</h4>
-      <p><a class="link link-large" href="#">hey@clay.global</a></p>
-      <h4 class="heading link-title">Work at Clay</h4>
-      <p><a class="link link-large" href="#">jobs@clay.global</a></p>
-      <img class="img" src="img/contact.jpg"></img>
-    <br>
+    <div class="grid grid--one-col">
 
-    <h3>Project</h3>
-    <img class="img img-project" src="img/atom_3.png"></img>
-    <h2 class="heading project-title">Serena & Lily</h2>
-    <p class="text text-description">Ecommerce redesign for a leader in luxury home decor</p>
-    <br>
+    
+      <div class="grid-card">
+        
+        <h3 class="card-header">Contact info</h3>
+        <div class="grid grid--two-col align-center">
 
-    <h3>Statistics</h3>
-    <h1 class="heading heading-huge">78</h1>
-    <p class="text">Global Team Members</p>
+          <div class="grid-item-space-right">
+          <h1 class="heading">Let’s Talk</h1>
+          <p class="text">We'd love to learn more about you and what we can design and build together.</p>
+          
+          <div class="grid grid--two-col">
+          <div class="grid-item-space-right">
+            <h4 class="heading link-title">Become a Client</h4>
+            <p><a class="link link-large" href="#">hey@clay.global</a></p>
+          </div>
+          <div class="grid-item">
+          <h4 class="heading link-title">Work at Clay</h4>
+          <p><a class="link link-large" href="#">jobs@clay.global</a></p>
+        </div>
+      </div>
+        </div>
 
-    <h1 class="heading heading-huge">14</h1>
-    <p class="text">Years In Business</p>
+          <img class="img-project" src="img/contact.jpg"></img>
+      </div>
+    </div>
 
-    <h1 class="heading heading-huge">500+</h1>
-    <p class="text">Projects Completed</p>
-    <br>
+    <div class="grid-card">
+      <h3>Project</h3>
+      <div class="grid grid--two-col">
+      <div class="grid-item">
+        <img class="img img-project" src="img/atom_3.png"></img>
+      <h2 class="heading project-title">Serena & Lily</h2>
+      <p class="text text-description">Ecommerce redesign for a leader in luxury home decor</p>
+    </div>
+    </div>
+    </div>
+
+    <div class="grid-card">
+      <h3>Statistics</h3>
+      <div class="grid grid--three-col">
+
+           <div class="grid-item">
+      <h1 class="heading heading-huge">78</h1>
+      <p class="text">Global Team Members</p>
+    </div>
+
+    <div class="grid-item">
+      <h1 class="heading heading-huge">14</h1>
+      <p class="text">Years In Business</p>
+    </div>
+
+    <div class="grid-item">
+      <h1 class="heading heading-huge">500+</h1>
+      <p class="text">Projects Completed</p>
+      </div>
+    </div></div> 
 
     </div>
+  </div>
 
 </section>
 </body>
