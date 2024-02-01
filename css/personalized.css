@@ -19,7 +19,7 @@ a {
 	transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000);
 }
 a:hover {
-	color: #000;
+	color: #747474;
 }
 
 
@@ -46,7 +46,7 @@ code, pre {
 /* Structural */
 
 .grid {
-	gap: 1em;
+	gap: 3em;
 	display: grid;
 }
 
@@ -81,26 +81,76 @@ code, pre {
 }
 
 .container {
-	padding: 3em;
+	padding: 5em 10em;
 }
 
 .nav {
 	display: flex;
 	align-items:center;
 	justify-content: space-between;
-	padding: 0 3em;
+	padding: 1.5em 7em;
 }
 
 .link-nav {
 	padding-left: 2em;
 }
 
-.link-button {
+nav .link-button {
 	padding-left: 2em;
 
 }
 
 /* Components */
+
+.hero {
+	height: 50vh;
+}
+
+.img-hero {
+	position: relative;
+	width: 450px;
+	float:right;
+	margin-right: 10%;
+	margin-bottom: 4em;
+}
+
+.heading-hero {
+	position: absolute;
+	width: 50%;
+	margin-top: 12vh;
+}
+
+video {
+	width: 100%;
+}
+
+.video-showreel {
+	position:relative;
+}
+
+.card-large {
+	width: 700px;
+	left: 0; 
+	right: 0; 
+	margin-left: auto; 
+	margin-right: auto; 
+	position: absolute;
+	background: #fff;
+	margin-top: -10em;
+	padding: 1em 3em;
+}
+
+.container-skills {
+	margin-top: 7em;
+}
+
+.container-bg-dark {
+	background: #23242b;
+}
+
+.text-light {
+	color:#fff;
+}
 
 .img-single {
 	width: 50%;
@@ -113,7 +163,11 @@ code, pre {
 }
 
 .img-logo {
-	height: 15vh;
+	height: 7vh;
+}
+
+.img {
+	max-width: 100%;
 }
 
 .heading--page-title {
@@ -135,9 +189,12 @@ h2 {
 
 }
 
-p {
+p, a {
 	font-weight: 300;
+	letter-spacing: 0.05em;
 }
+
+
 
 .text--lead-paragraph {
 	font-size: 1.25em;
@@ -150,11 +207,23 @@ p {
 
 .link {
 	font-weight:300;
+	color:#000;
 }
+
+.link-light {
+	color:#fff;
+}
+
+
+
 
 .link-large {
 	color: #000;
-	font-size: 1.5em;
+	font-size: 1.25em;
+	border-bottom: 2px solid #bbc4d2;
+}
+
+.link-card {
 	border-bottom: 2px solid #bbc4d2;
 }
 
