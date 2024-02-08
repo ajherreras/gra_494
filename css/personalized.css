@@ -7,19 +7,16 @@ body {
 	padding: 0;
 	height: auto;
 	line-height: 1.5;
-	font-size: 16px;
+	font-size: 17px;
 	background-color: #ffffff;
 	color: #000;
-	font-family: "Poppins", sans-serif;
+	font-family: "Nunito Sans", sans-serif;
 }
 
 a {
 	color: #89969e;
 	text-decoration: none;
 	transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000);
-}
-a:hover {
-	color: #747474;
 }
 
 
@@ -84,6 +81,11 @@ code, pre {
 	padding: 5em 10em;
 }
 
+.container-footer {
+	padding: 3em 7em;
+	align-items: center;
+}
+
 .nav {
 	display: flex;
 	align-items:center;
@@ -92,11 +94,14 @@ code, pre {
 }
 
 .link-nav {
-	padding-left: 2em;
+	margin-left: 2em;
 }
 
 nav .link-button {
-	padding-left: 2em;
+	margin-left: 2em;
+	color: #fff;
+	background: #22262a;
+	padding: 0.5em 0.75em;
 
 }
 
@@ -148,6 +153,11 @@ video {
 	background: #23242b;
 }
 
+.container-footer {
+	display: flex;
+	justify-content: space-between;
+}
+
 .text-light {
 	color:#fff;
 }
@@ -160,6 +170,10 @@ video {
 
 .img-project {
 	width: 100%;
+}
+
+.footer .img-logo {
+	height: 5vh;
 }
 
 .img-logo {
@@ -175,13 +189,13 @@ video {
 }
 
 h1,h2,h3 {
-	font-weight:500;
+	font-weight:600;
 }
 
 h1 {
 	font-size: 54px;
 	margin:0;
-	letter-spacing:-0.04em;
+	letter-spacing:-0.03em;
 }
 
 h2 {
@@ -191,7 +205,7 @@ h2 {
 
 p, a {
 	font-weight: 300;
-	letter-spacing: 0.05em;
+	letter-spacing: 0.025em;
 }
 
 
@@ -215,7 +229,89 @@ p, a {
 }
 
 
+.link-hvr-underline {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	position: relative;
+  }
+  .link-hvr-underline:before {
+	content: "";
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	right: 100%;
+	top: 1.5em;
+	background: #000;
+	height: 2px;
+	-webkit-transition-property: right;
+	transition-property: right;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+  }
+  .link-hvr-underline:hover:before, .link-hvr-underline:focus:before, .link-hvr-underline:active:before {
+	right: 0;
+  }
 
+  .link-hvr-underline-light {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	position: relative;
+  }
+  .link-hvr-underline-light:before {
+	content: "";
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	right: 100%;
+	top: 1.5em;
+	background: #fff;
+	height: 2px;
+	-webkit-transition-property: right;
+	transition-property: right;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+  }
+  .link-hvr-underline-light:hover:before, .link-hvr-underline-light:focus:before, .link-hvr-underline-light:active:before {
+	right: 0;
+  }
+
+  .link-hvr-underline-gray {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	position: relative;
+  }
+  .link-hvr-underline-gray:before {
+	content: "";
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	right: 100%;
+	top: 1.5em;
+	background: #89969e;
+	height: 2px;
+	-webkit-transition-property: right;
+	transition-property: right;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+  }
+  .link-hvr-underline-gray:hover:before, .link-hvr-underline-gray:focus:before, .link-hvr-underline-gray:active:before {
+	right: 0;
+  }
 
 .link-large {
 	color: #000;
@@ -250,6 +346,10 @@ h4 {
 	margin-right: 7px;
 }
 
+.footer-links a {
+	margin-left: 2em;
+}
+
 
 section.main {
     max-width: 1000px;
@@ -265,9 +365,20 @@ p.copyright {
     color: #333333;
 }
 
+
+
+
 /* Breakpoint */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
 	section.main {
 		margin: 5rem 2rem;
+	}
+
+	.container {
+		padding: 2em;
+	}
+
+	.grid {
+		display: block;
 	}
 }
