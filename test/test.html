@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<!-- Head -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Midterm Project</title>
+  <link rel="stylesheet" href="/test/test-style.css">
+  <link rel="stylesheet" href="demo/normalize.css">
+	<link rel="stylesheet" href="demo/bagpakk.min.css">
+	<link rel="stylesheet" href="demo/style.css">
+	<link rel="stylesheet" href="/swipebox-master/src/css/swipebox.css">
+  <script src="https://kit.fontawesome.com/30cd679648.js" crossorigin="anonymous"></script>
+
+</head>
+
+<!-- Body -->
+<body>
+
+<div class="grid grid--two-col">
+<div class="lightbox-video">
+
+  <a href="../img/showreel.mp4" class="swipebox" title="Fog" rel="gallery">
+    <img src="../img/team-picture.jpg" alt="image">
+  </a>
+
+<div class="grid-item">
+  <p>Lorem ipsum</p>
+</div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="scripts.js"></script>
+<script src="src/js/jquery.swipebox.js"></script>
+<script type="text/javascript">
+$( document ).ready(function() {
+
+    /* Basic Gallery */
+    $( '.swipebox' ).swipebox();
+    
+    /* Video */
+    $( '.swipebox-video' ).swipebox();
+
+    /* Dynamic Gallery */
+    $( '#gallery' ).on( 'click', function( e ) {
+      e.preventDefault();
+      $.swipebox( [
+        { href : 'demo/images/big-1.jpg', title : 'My Caption' },
+        { href : 'demo/images/big-2.jpg', title : 'My Second Caption' }
+      ] );
+    } );
+
+    /* Smooth scroll */
+    $( '.scroll' ).on( 'click', function () {
+      $( 'html, body' ).animate( { scrollTop: $( $( this ).attr('href') ).offset().top - 15 }, 750 ); // Go
+      return false;
+    });
+    } );
+</script>
+
+</body>
+</html>

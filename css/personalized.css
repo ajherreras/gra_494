@@ -10,7 +10,7 @@ body {
 	font-size: 17px;
 	background-color: #ffffff;
 	color: #000;
-	font-family: "Nunito Sans", sans-serif;
+	font-family: "DM Sans", sans-serif;
 }
 
 a {
@@ -69,6 +69,7 @@ code, pre {
 	margin-bottom: 2em;
 }
 
+
 .grid-item-space-right {
 	padding-right: 3em;
 }
@@ -105,6 +106,128 @@ nav .link-button {
 
 }
 
+/* Menu */
+
+.header {
+	margin: auto;
+	padding: 2em 10em;
+	vertical-align: middle;
+  
+  	margin: 0;
+	padding-top: 0.5em;
+	list-style: none;
+	overflow: hidden;
+  }
+
+  
+  
+  .header .logo {
+	display: block;
+	float: left;
+  }
+  
+  /* menu */
+  
+  .header .menu {
+	clear: both;
+	max-height: 0;
+	transition: max-height .2s ease-out;
+  }
+  
+  /* menu icon */
+  
+  .header .menu-icon {
+	cursor: pointer;
+	display: inline-block;
+	float: right;
+	padding: 28px 20px;
+	position: relative;
+	user-select: none;
+  }
+  
+  .header .menu-icon .navicon {
+	background: #000;
+	display: block;
+	height: 2px;
+	position: relative;
+	transition: background .2s ease-out;
+	width: 18px;
+  }
+  
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+	background: #333;
+	content: '';
+	display: block;
+	height: 100%;
+	position: absolute;
+	transition: all .2s ease-out;
+	width: 100%;
+  }
+  
+  .header .menu-icon .navicon:before {
+	top: 5px;
+  }
+  
+  .header .menu-icon .navicon:after {
+	top: -5px;
+  }
+
+  .youtube:after {
+	background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20159.00691%20111.60904%22%3E%3Cpath%20d%3D%22M36.2%20111c-25-1.3-29.6-4-34-18.6C.3%2086.7%200%2080%200%2057.4%200%2019%202.3%209.7%2013.6%204c11.5-5.6%20120-5.6%20131.4%200%206%203%2010%208.7%2011.8%2017.2%202%209.8%203%2042.2%201.5%2057.5-2%2020.4-7%2028.5-19.2%2030.8-7.6%201.5-82%202.4-102.8%201.3zM85%2065.3c11.3-6%2020.4-11%2020.3-11L84%2043%2063%2032v22c0%2012%20.4%2022%20.8%2022%20.3%200%2010-5%2021.2-10.8z%22%20fill%3D%22%23db2823%22%2F%3E%3Cpath%20d%3D%22M63.2%2032c-.4.3-.2%201-.3%201.3v28.5c0%204.6%200%209.2.5%2013.8%200%20.4.3.7.6.5%206.3-3%2012.3-6%2018.4-9.3%207.5-4%2015-7.8%2022.2-12%20.3%200%201-.4.6-.8-12.8-7-25.7-13.5-38.6-20.2-1-.6-2.2-1.3-3.4-1.7z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E');
+	background-size: 2.5em;
+}
+  
+  /* menu btn */
+  
+  .header .menu-btn {
+	display: none;
+  }
+  
+  .header .menu-btn:checked ~ .menu {
+	max-height: 240px;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+	background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+	transform: rotate(-45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+	transform: rotate(45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+	top: 0;
+  }
+  
+  
+  @media (min-width: 1000px) {
+
+.header li {
+	float:left;
+}
+	.header .menu {
+	  clear: none;
+	  float: right;
+	  max-height: none;
+	}
+	.header .menu-icon {
+	  display: none;
+	}
+  }
+
+  @media (max-width: 1000px) {
+	.header {
+		padding: 2em 2em;
+	  }
+  }
+  
+
 /* Components */
 
 .hero {
@@ -129,8 +252,11 @@ video {
 	width: 100%;
 }
 
-.video-showreel {
-	position:relative;
+.video-background {
+	object-fit: cover;
+	width: 100%;
+	height: 70vh;
+	opacity: 25%;
 }
 
 .card-large {
@@ -189,13 +315,12 @@ video {
 }
 
 h1,h2,h3 {
-	font-weight:600;
+	font-weight:500;
 }
 
 h1 {
 	font-size: 54px;
 	margin:0;
-	letter-spacing:-0.03em;
 }
 
 h2 {
@@ -368,8 +493,215 @@ p.copyright {
 
 
 
+
+.video-lightbox-container img {
+	width: 100%;
+	height: auto;
+}
+
+
+.video-lightbox-container {
+	position:relative;
+}
+
+
+
+
+ #button {
+	/* Text */
+	font-size: 2em;
+	
+	/* Dimensions */
+	width: 1.5em;
+	height: 1.5em;
+	
+	/* Positioning */
+	position: absolute;
+	top: 70%;
+	left: 5%;
+	
+	/* Styling */
+	background-color: #fff;
+	border: 0; 
+	border-radius: 50%; 
+	outline: none; 
+	cursor: pointer;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+	
+	/* ----- Transformations ----- */
+	-webkit-transform: scale(1, 1);
+	-moz-transform: scale(1, 1);
+	-ms-transform: scale(1, 1);
+	-o-transform: scale(1, 1);
+	transform: scale(1, 1);
+	
+	/* ----- Transitions ----- */
+	-webkit-transition: transform .5s ease;
+	-moz-transition: transform .5s ease;
+	-ms-transition: transform .5s ease;
+	-o-transition: transform .5s ease;
+	transition: transform .5s ease;
+  }
+  
+  #button:hover {
+	/* ----- Transformations ----- */
+	-webkit-transform: scale(1.2, 1.2);
+	-moz-transform: scale(1.2, 1.2);
+	-ms-transform: scale(1.2, 1.2);
+	-o-transform: scale(1.2, 1.2);
+	transform: scale(1.2, 1.2);
+	
+	/* ----- Transitions ----- */
+	-webkit-transition: transform .5s ease;
+	-moz-transition: transform .5s ease;
+	-ms-transition: transform .5s ease;
+	-o-transition: transform .5s ease;
+	transition: transform .5s ease;
+  }
+  
+  #button > i {
+	/* Text */
+	color: #000;
+	text-shadow: 1px 1px rgba(255, 255, 255, 0.2);
+
+	
+	/* Positioning */
+	position: relative;
+	margin-top: 4px;
+	margin-left: 6px;
+	
+	/* ----- Transitions ----- */
+	-webkit-transition: color .5s ease;
+	-moz-transition: color .5s ease;
+	-ms-transition: color .5s ease;
+	-o-transition: color .5s ease;
+	transition: color .5s ease;
+  }
+  
+  #button:hover > i {
+	/* Text */
+	color: #55616a;
+	
+	/* ----- Transitions ----- */
+	-webkit-transition: color .5s ease;
+	-moz-transition: color .5s ease;
+	-ms-transition: color .5s ease;
+	-o-transition: color .5s ease;
+	transition: color .5s ease;
+	
+  }
+  
+
+
+  #lightbox {
+	/* ----- Positioning ----- */
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	width: 100%;
+	
+	/* The code above makes sure that the
+	lightbox covers the entire page*/
+	
+	/* ----- Visibility ----- */
+	display: none;
+	
+	/* ----- Styling ----- */
+	background-color: rgba(0, 0, 0, 0.80);
+
+  }
+
+  #lightbox video {
+	width: 100%;
+  }
+  
+  #video-wrapper {
+	/* ----- Positioning ----- */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 2;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	
+	/* The code above makes sure the video is
+	both vertically and horizontally centered
+	to the screen */
+	
+	/* ----- Styling ----- */
+	box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+	
+	/* The code above is used to add a little shadow to the video making blend in better */
+  }
+  
+  #close-btn {
+	/* ----- Text ----- */
+	color: grey;
+	font-size: 25px;
+	
+	/* ----- Positioning ----- */
+	position: fixed;
+	top: 3%;
+	right: 3%;
+	z-index: 2;
+	
+	/* The code above is used to put the button on the upper right corner of the lightbox */
+	
+	/* ----- Transformations ----- */
+	-webkit-transform: scale(1, 1);
+	-moz-transform: scale(1, 1);
+	-ms-transform: scale(1, 1);
+	-o-transform: scale(1, 1);
+	transform: scale(1, 1);
+	
+	 /* The code above is used to initialize the scale for the button so that it can be used in transitions */
+	
+	/* ----- Transitions ----- */
+	-webkit-transition: transform .5s ease, color .5s ease;
+	-moz-transition: transform .5s ease, color .5s ease;
+	-ms-transition: transform .5s ease, color .5s ease;
+	-o-transition: transform .5s ease, color .5s ease;
+	transition: transform .5s ease, color .5s ease;
+  }
+  
+  #close-btn:hover {
+	/* ----- Text ----- */
+	color: white;
+	
+	/* ----- Styling ----- */
+	cursor: pointer;
+	
+	/* ----- Transformations ----- */
+	-webkit-transform: scale(1.2, 1.2);
+	-moz-transform: scale(1.2, 1.2);
+	-ms-transform: scale(1.2, 1.2);
+	-o-transform: scale(1.2, 1.2);
+	transform: scale(1.2, 1.2);
+	
+	  /* ----- Transitions ----- */
+	-webkit-transition: transform .5s ease, color .5s ease;
+	-moz-transition: transform .5s ease, color .5s ease;
+	-ms-transition: transform .5s ease, color .5s ease;
+	-o-transition: transform .5s ease, color .5s ease;
+	transition: transform .5s ease, color .5s ease;
+  }
+
+
+
+
+
+
+
+
+
 /* Breakpoint */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 950px) {
 	section.main {
 		margin: 5rem 2rem;
 	}
@@ -382,3 +714,4 @@ p.copyright {
 		display: block;
 	}
 }
+
