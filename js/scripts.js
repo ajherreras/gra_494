@@ -15,3 +15,9 @@ $(document).ready(function() {
       $("#button").show(250);
     });
   });
+
+  AOS.init();
+
+  var rellax = new Rellax('.rellax', {
+    center: true
+  });
