@@ -7,12 +7,14 @@ $(document).ready(function() {
       var videoURL = $('#video').prop('src');
       videoURL += "?autoplay=1";
       $('#video').prop('src',videoURL);
+      $('#video').trigger('play');
     });
     
     // When the close button is clicked make the lightbox fade out in the span of 0.5 seconds and show the play button
     $("#close-btn").on("click", function() {
       $("#lightbox").fadeOut(500);
       $("#button").show(250);
+      $('#video').trigger('pause');
     });
   });
 
