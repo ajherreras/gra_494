@@ -507,7 +507,7 @@ h4 {
 
  #button {
 	/* Text */
-	font-size: 2em;
+	font-size: 1.5em;
 	
 	/* Dimensions */
 	width: 2em;
@@ -560,14 +560,13 @@ h4 {
   
   #button > i {
 	/* Text */
-	color: #23242b;
-	text-shadow: 1px 1px 5px rgba(0,0,0, 0.3);
+	color: #55616a;
+	text-shadow: 3px 1px 5px rgba(0,0,0, 0.3);
 
 	
 	/* Positioning */
 	position: relative;
-	margin-top: 4px;
-	margin-left: 6px;
+	margin: auto;
 	
 	/* ----- Transitions ----- */
 	-webkit-transition: color .5s ease;
@@ -579,7 +578,7 @@ h4 {
   
   #button:hover > i {
 	/* Text */
-	color: #55616a;
+	color: #000;
 	
 	/* ----- Transitions ----- */
 	-webkit-transition: color .5s ease;
@@ -731,5 +730,9 @@ h4 {
 		padding: 1em 2em;
 
 }
+
+#video {
+	width: 100vw;
+  }
 
 }
