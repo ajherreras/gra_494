@@ -324,6 +324,7 @@ h1,h2,h3 {
 h1 {
 	font-size: 54px;
 	margin:0;
+	line-height: 1em;
 }
 
 h2 {
@@ -509,8 +510,8 @@ h4 {
 	font-size: 2em;
 	
 	/* Dimensions */
-	width: 1.5em;
-	height: 1.5em;
+	width: 50px;
+	height: 50px;
 	
 	/* Positioning */
 	position: absolute;
@@ -720,11 +721,13 @@ h4 {
 	}
 
 	.card {
-		padding-top: 4em;
+		padding: 3em 0;
 	}
 
 	.card-large {
+		max-width: 75%;
 		position:relative;
+		padding: 1em 2em;
 
 }
 
